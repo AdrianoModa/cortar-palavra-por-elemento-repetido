@@ -1,7 +1,8 @@
 // Import stylesheets
 import './style.css';
 
-// Melhoramento
+// Recentemente, me deparei várias vezes em cortar uma palavra pelo segundo ou terceiro
+// elemento string repetido. Nesse código encontrei a solução.
 const appDiv = document.getElementById('app');
 
 const value = "desenvolvedor".toLowerCase();
