@@ -19,14 +19,14 @@ appDiv.innerHTML = sliceWordByElement(value, searchValue, indexPos);
  * @param indexPos Posição do elemento repetido, acesso do valor semelhante a um array.
  */
 function sliceWordByElement(value, searchValue, indexPosition) {
-  let palavraAlterada = [];
+  let stringChanged = [];
   
   Array.from(value).forEach((value, index) => {
     if (value == searchValue) {
-      palavraAlterada.push(index);
+      stringChanged.push(index);
     }
   });
 
-  const novaPalavra = value.substring(0, palavraAlterada[indexPosition]);
-  return novaPalavra;
+  const newString = value.substring(0, stringChanged[indexPosition]);
+  return newString;
 }
