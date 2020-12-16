@@ -6,8 +6,8 @@ import './style.css';
 const appDiv = document.getElementById('app');
 
 const value = "desenvolvedor".toLowerCase();
-const searchValue = "v";
-const indexPos = 0;
+const searchValue = "e";
+const indexPos = 2;
 appDiv.innerHTML = sliceWordByElement(value, searchValue, indexPos);
 
 /**
