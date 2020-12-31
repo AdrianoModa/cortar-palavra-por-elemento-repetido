@@ -8,7 +8,24 @@
 	<div class="card mt-2">
 		<h5 class="card-header">Console</h5>
 		<div class="card-body">
-			<pre><div id="app" class="mx-auto"></div>
-		</div>
+			<div class="form-group">
+				<label>Enter name</label>
+				<input type="text" id="input-name" class="form-control">
+      </div>
+      <div class="form-group">
+				<label>Search value</label>
+				<input type="text" id="input-letter" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Position cutter letter</label>
+        <input type="number" id="input-position-letter" class="form-control">
+      </div>
+      <button class="btn btn-primary btn-sm" id="result-button">Result</button>
+      <button id="btn-reset" type="button" class="btn btn-secondary btn-sm">Limpar</button>
+        <p>Result Word: </p>
+        <pre><div id="app" class="mx-auto text-primary"></div>
+      <div>
+      </div>
+      </div>
 	</div>
 </div>
