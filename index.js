@@ -15,6 +15,9 @@ const appDiv = document.getElementById("app");
  */
 
 const resultButton = document.getElementById("result-button");
+const inputName = document.getElementById("input-name");
+
+inputName.focus()
 
 function sliceWordByElement(value, searchValue, indexPosition) {
   let stringChanged = [];
