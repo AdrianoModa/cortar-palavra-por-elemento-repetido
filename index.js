@@ -18,8 +18,15 @@ const resultButton = document.getElementById("result-button");
 var inputSearchValue = document.getElementById("input-name");
 var inputLetter = document.getElementById("input-letter");
 var inputIndexPosition = document.getElementById("input-position-letter");
+var iDInputElements = [inputSearchValue, inputLetter, inputIndexPosition]
 
 inputSearchValue.focus();
+
+function validInput(){
+  const iDInputElements = [inputSearchValue.value, inputLetter.value, inputIndexPosition.value]
+  const valid = iDInputElements.includes("")
+  if(valid) return alert('Campo(s) ainda vazio(s)');
+}
 
 function sliceWordByElement(value, searchValue, indexPosition) {
   let stringChanged = [];
@@ -35,6 +42,7 @@ function sliceWordByElement(value, searchValue, indexPosition) {
 }
 
 resultButton.onclick = function() {
+  validInput();
   const value = inputSearchValue.value.toLowerCase();
   const letter = inputLetter.value;
   const position = parseInt(inputIndexPosition.value);
@@ -42,8 +50,7 @@ resultButton.onclick = function() {
 };
 
 var buttonReset = document.getElementById("btn-reset");
-buttonReset.onclick = function() {
-  const iDInputElements = [inputSearchValue, inputLetter, inputIndexPosition]
+buttonReset.onclick = function() {  
 
   for(let elementId of iDInputElements){
     elementId.value = ""
