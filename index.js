@@ -15,9 +15,11 @@ const appDiv = document.getElementById("app");
  */
 
 const resultButton = document.getElementById("result-button");
-const inputName = document.getElementById("input-name");
+var inputSearchValue = document.getElementById("input-name");
+var inputLetter = document.getElementById("input-letter");
+var inputIndexPosition = document.getElementById("input-position-letter");
 
-inputName.focus()
+inputSearchValue.focus();
 
 function sliceWordByElement(value, searchValue, indexPosition) {
   let stringChanged = [];
@@ -33,9 +35,6 @@ function sliceWordByElement(value, searchValue, indexPosition) {
 }
 
 resultButton.onclick = function() {
-  const inputSearchValue = document.getElementById("input-name");
-  const inputLetter = document.getElementById("input-letter");
-  const inputIndexPosition = document.getElementById("input-position-letter");
   const value = inputSearchValue.value.toLowerCase();
   const letter = inputLetter.value;
   const position = parseInt(inputIndexPosition.value);
@@ -44,15 +43,11 @@ resultButton.onclick = function() {
 
 var buttonReset = document.getElementById("btn-reset");
 buttonReset.onclick = function() {
-  const iDSearchValue = document.getElementById("input-name");
-  const iDLetter = document.getElementById("input-letter");
-  const iDIndexPosition = document.getElementById("input-position-letter");
-  const iDInputElements = [iDSearchValue, iDLetter, iDIndexPosition]
+  const iDInputElements = [inputSearchValue, inputLetter, inputIndexPosition]
 
   for(let elementId of iDInputElements){
     elementId.value = ""
   }
-
   appDiv.innerHTML = ""
 
 };
